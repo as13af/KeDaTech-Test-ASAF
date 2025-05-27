@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Tree View -->
+    <record id="view_kedatech_material_tree" model="ir.ui.view">
+        <field name="name">kedatech.material.tree</field>
+        <field name="model">kedatech.material</field>
+        <field name="arch" type="xml">
+            <tree string="Materials">
+                <field name="material_code_kedatech"/>
+                <field name="name"/>
+                <field name="material_type_kedatech"/>
+                <field name="material_price_kedatech"/>
+                <field name="currency_id_kedatech"/>
+                <field name="supplier_id_kedatech"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form View (Expanded Layout) -->
+    <record id="view_kedatech_material_form" model="ir.ui.view">
+        <field name="name">kedatech.material.form</field>
+        <field name="model">kedatech.material</field>
+        <field name="arch" type="xml">
+            <form string="Material">
+                <sheet>
+                    <group>
+                        <group string="Basic Info" colspan="2">
+                            <field name="name"/>
+                            <field name="material_code_kedatech" readonly="1" placeholder="Material Code Gather after create the record" />
+                            <field name="material_type_kedatech" class="oe_inline"/>
+                        </group>
+                        
+                        <group string="Pricing" colspan="2">
+                            <field name="material_price_kedatech"/>
+                            <field name="currency_id_kedatech"/>
+                        </group>
+
+                        <group string="Supplier Details" colspan="2">
+                            <field name="supplier_id_kedatech"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Search View with Filters -->
+    <record id="view_kedatech_material_search" model="ir.ui.view">
+        <field name="name">kedatech.material.search</field>
+        <field name="model">kedatech.material</field>
+        <field name="arch" type="xml">
+            <search string="Search Materials">
+                <!-- Field Filters -->
+                <field name="name" string="Material Name"/>
+                <field name="material_type_kedatech" string="Type"/>
+                
+                <!-- Predefined Filters -->
+                <filter string="Fabric" name="fabric_filter" 
+                    domain="[('material_type_kedatech','=','fabric_type')]"/>
+                <filter string="Jeans" name="jeans_filter" 
+                    domain="[('material_type_kedatech','=','jeans_type')]"/>
+                <filter string="Cotton" name="cotton_filter" 
+                    domain="[('material_type_kedatech','=','cotton_type')]"/>
+
+                <!-- Group Filters -->
+                <group expand="0" string="Group By">
+                    <filter string="Material Type" 
+                        name="group_by_type" 
+                        context="{'group_by':'material_type_kedatech'}"/>
+                    <filter string="Supplier" 
+                        name="group_by_supplier" 
+                        context="{'group_by':'supplier_id_kedatech'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_kedatech_material" model="ir.actions.act_window">
+        <field name="name">Materials</field>
+        <field name="res_model">kedatech.material</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_kedatech_material_tree"/>
+        <field name="search_view_id" ref="view_kedatech_material_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocentent_smiling_face">
+                Create your first material
+            </p>
+        </field>
+    </record>
+
+    <!-- Menu Items -->
+    <menuitem id="menu_kedatech_root" name="Kedatech ASAF" sequence="10"/>
+    <menuitem id="menu_kedatech_material" name="Materials" 
+        parent="menu_kedatech_root" action="action_kedatech_material" sequence="10"/>
+</odoo>

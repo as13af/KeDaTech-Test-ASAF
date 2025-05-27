@@ -1,0 +1,25 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Odoo14ce (Backend) with Tests",
+            "type": "debugpy",
+            "request": "launch",
+            "stopOnEntry": false,
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "python": "C:/Program Files/Odoo 14.0.20231205/python/python.exe",
+            "program": "C:/Program Files/Odoo 14.0.20231205/server/odoo-bin",
+            "args": [
+                "--config=F:\\KeDaTech-Test-ASAF\\kedatech_ASAF_Test.conf",
+                "-d", "KedatechDatabase",
+                "-u", "kedatech_test_material",
+                "--test-enable",
+                "--test-tags=post_install",
+                "--log-level=info"
+            ],
+            "cwd": "${workspaceFolder}",
+            "env": {}
+        }
+    ]
+}
