@@ -31,8 +31,10 @@
                         </group>
                         
                         <group string="Pricing" colspan="2">
-                            <field name="material_price_kedatech"/>
-                            <field name="currency_id_kedatech"/>
+                            <field name="material_price_kedatech" widget="monetary" options="{'currency_field': 'currency_id_kedatech'}"/>
+                            <field name="currency_id_kedatech" 
+                            invisible="1"
+                            />
                         </group>
 
                         <group string="Supplier Details" colspan="2">

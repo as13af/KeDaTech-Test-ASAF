@@ -7,100 +7,116 @@ _logger = logging.getLogger(__name__)
 
 @tagged('post_install', '-at_install')
 class TestKedatechMaterial(TransactionCase):
-
     def setUp(self):
         super(TestKedatechMaterial, self).setUp()
-        self.Material = self.env['kedatech.material']
-        self.company = self.env.company
+        _logger.info("Setting up TestKedatechMaterial test case...")
+        # Create test supplier
         self.supplier = self.env['res.partner'].create({'name': 'Test Supplier'})
-        _logger.info("Test setup complete: Supplier 'Test Supplier' created.")
-
-    def test_create_material(self):
-        """Test basic material creation with code generation"""
-        _logger.info("Starting test_create_material...")
-        material = self.Material.create({
-            'name': 'Test Fabric',
+        _logger.info(f"Created test supplier with id {self.supplier.id} and name '{self.supplier.name}'")
+        # Predefined valid material values
+        self.material_vals = {
+            'name': 'Test Material',
             'material_type_kedatech': 'fabric_type',
             'material_price_kedatech': 150.0,
             'supplier_id_kedatech': self.supplier.id,
-        })
-        _logger.info(f"Material created: {material.name} with code {material.material_code_kedatech}")
-        self.assertEqual(material.material_code_kedatech, 'FBC-TF-001')
-        self.assertEqual(material.currency_id_kedatech, self.company.currency_id)
-        _logger.info("test_create_material passed.")
+        }
+        _logger.info("Predefined material values set.")
+
+    def test_material_creation(self):
+        _logger.info("Starting test_material_creation...")
+        material = self.env['kedatech.material'].create(self.material_vals)
+        _logger.info(f"Created material with id {material.id} and name '{material.name}'")
+        self.assertTrue(material, "Material should be created")
+        self.assertEqual(material.name, "Test Material")
+        self.assertEqual(material.supplier_id_kedatech, self.supplier)
+        _logger.info("test_material_creation passed.")
 
     def test_material_code_generation(self):
-        """Test various material code generation scenarios"""
         _logger.info("Starting test_material_code_generation...")
-        test_cases = [
-            ('jeans_type', 'Blue Jeans', 'JNS-BJ-002'),
-            ('cotton_type', 'Egyptian Cotton', 'CTN-EC-003'),
-            ('fabric_type', 'Silk', 'FBC-S-004'),
-            (False, 'Test Material', 'UNK-TM-005'),
-            ('invalid_type', '', 'UNK-UNK-006'),
-        ]
-        for idx, (mtype, name, expected) in enumerate(test_cases, start=2):
-            with self.subTest(mtype=mtype, name=name):
-                material = self.Material.create({
-                    'name': name,
-                    'material_type_kedatech': mtype,
-                    'material_price_kedatech': 100 + idx*10,
-                })
-                _logger.info(f"Material created: {material.name} with code {material.material_code_kedatech}")
-                self.assertEqual(material.material_code_kedatech, expected)
+        material = self.env['kedatech.material'].create(self.material_vals)
+        code_parts = material.material_code_kedatech.split('-')
+        _logger.info(f"Material code generated: {material.material_code_kedatech}")
+        self.assertEqual(len(code_parts), 3, "Code should have 3 components")
+        self.assertEqual(code_parts[0], 'FBC', "Fabric type should map to FBC")
+        self.assertEqual(code_parts[1], 'TM', "Name initials should be 'TM'")
+        self.assertEqual(code_parts[2], str(material.id).zfill(3), "ID should be zero-padded")
+
+        type_mapping = {
+            'jeans_type': 'JNS',
+            'cotton_type': 'CTN'
+        }
+        for mtype, expected_code in type_mapping.items():
+            vals = self.material_vals.copy()
+            vals['material_type_kedatech'] = mtype
+            material = self.env['kedatech.material'].create(vals)
+            _logger.info(f"Material created with type {mtype}, code: {material.material_code_kedatech}")
+            self.assertEqual(material.material_code_kedatech.split('-')[0], expected_code)
+
+        vals = self.material_vals.copy()
+        vals['name'] = "Premium Cotton Blend"
+        material = self.env['kedatech.material'].create(vals)
+        initials = material.material_code_kedatech.split('-')[1]
+        _logger.info(f"Material with multi-word name code initials: {initials}")
+        self.assertEqual(initials, 'PCB')
         _logger.info("test_material_code_generation passed.")
 
-    def test_price_validation(self):
-        """Test material price validation constraints"""
-        _logger.info("Starting test_price_validation...")
-        # Test valid price
-        valid_material = self.Material.create({
-            'name': 'Valid Material',
-            'material_price_kedatech': 100.0,
-        })
-        _logger.info(f"Valid material created: {valid_material.name}")
-        self.assertTrue(valid_material.id)
+    def test_missing_material_type_code_generation(self):
+        _logger.info("Starting test_missing_material_type_code_generation...")
+        vals = self.material_vals.copy()
+        vals.pop('material_type_kedatech')
+        material = self.env['kedatech.material'].create(vals)
+        code_parts = material.material_code_kedatech.split('-')
+        _logger.info(f"Material code with missing type: {material.material_code_kedatech}")
+        self.assertEqual(code_parts[0], 'UNK', "Should use UNK for missing type")
+        self.assertEqual(code_parts[1], 'TM', "Should still generate name initials")
+        _logger.info("test_missing_material_type_code_generation passed.")
 
-        # Test invalid price
-        with self.assertRaises(ValidationError) as cm:
-            self.Material.create({
-                'name': 'Invalid Material',
-                'material_price_kedatech': 99.99,
-            })
-        _logger.error(f"ValidationError raised: {cm.exception}")
-        self.assertIn('must be at least 100', str(cm.exception))
-        _logger.info("test_price_validation passed.")
+    def test_price_constraint(self):
+        _logger.info("Starting test_price_constraint...")
+        material = self.env['kedatech.material'].create(self.material_vals)
+        _logger.info(f"Material created with valid price: {material.material_price_kedatech}")
 
-    def test_default_currency(self):
-        """Test automatic currency assignment"""
-        _logger.info("Starting test_default_currency...")
-        material = self.Material.create({
-            'name': 'Currency Test',
-            'material_price_kedatech': 200.0,
-        })
-        _logger.info(f"Material created: {material.name} with currency {material.currency_id_kedatech.name}")
-        self.assertEqual(material.currency_id_kedatech, self.company.currency_id)
-        _logger.info("test_default_currency passed.")
+        with self.assertRaises(ValidationError):
+            invalid_vals = self.material_vals.copy()
+            invalid_vals['material_price_kedatech'] = 99.0
+            _logger.info(f"Attempting to create material with invalid price: {invalid_vals['material_price_kedatech']}")
+            self.env['kedatech.material'].create(invalid_vals)
 
-    def test_material_without_name(self):
-        """Test material creation without name"""
-        _logger.info("Starting test_material_without_name...")
-        material = self.Material.create({
-            'material_type_kedatech': 'cotton_type',
-            'material_price_kedatech': 150.0,
-        })
-        _logger.info(f"Material created: {material.name} with code {material.material_code_kedatech}")
-        self.assertTrue(material.material_code_kedatech.startswith('CTN-UNK-'))
-        _logger.info("test_material_without_name passed.")
+        material = self.env['kedatech.material'].create(self.material_vals)
+        with self.assertRaises(ValidationError):
+            _logger.info(f"Attempting to update material id {material.id} with invalid price 50.0")
+            material.write({'material_price_kedatech': 50.0})
+        _logger.info("test_price_constraint passed.")
 
-    def test_supplier_relationship(self):
-        """Test supplier relationship functionality"""
-        _logger.info("Starting test_supplier_relationship...")
-        material = self.Material.create({
-            'name': 'Supplier Test',
-            'material_price_kedatech': 300.0,
-            'supplier_id_kedatech': self.supplier.id,
-        })
-        _logger.info(f"Material created: {material.name} with supplier {material.supplier_id_kedatech.name}")
-        self.assertEqual(material.supplier_id_kedatech.name, 'Test Supplier')
-        _logger.info("test_supplier_relationship passed.")
+    def test_required_fields(self):
+        _logger.info("Starting test_required_fields...")
+
+        with self.assertRaises(Exception):
+            vals = self.material_vals.copy()
+            vals.pop('name')
+            _logger.info("Attempting to create material without name")
+            self.env['kedatech.material'].create(vals)
+            
+        with self.assertRaises(Exception):
+            vals = self.material_vals.copy()
+            vals.pop('supplier_id_kedatech')
+            _logger.info("Attempting to create material without supplier")
+            self.env['kedatech.material'].create(vals)
+            
+        with self.assertRaises(Exception):
+            vals = self.material_vals.copy()
+            vals.pop('material_price_kedatech')
+            _logger.info("Attempting to create material without price")
+            self.env['kedatech.material'].create(vals)
+        _logger.info("test_required_fields passed.")
+
+    def test_currency_default(self):
+        _logger.info("Starting test_currency_default...")
+        material = self.env['kedatech.material'].create(self.material_vals)
+        _logger.info(f"Material created with currency: {material.currency_id_kedatech.name}")
+        self.assertEqual(
+            material.currency_id_kedatech,
+            self.env.company.currency_id,
+            "Should default to company currency"
+        )
+        _logger.info("test_currency_default passed.")

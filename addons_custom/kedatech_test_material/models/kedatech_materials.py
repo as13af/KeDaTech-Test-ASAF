@@ -9,7 +9,7 @@ class KedatechMaterial(models.Model):
     _name = 'kedatech.material'
     _description = 'Material'
 
-    name = fields.Char(string="Material Name")
+    name = fields.Char(string="Material Name", required=True)
     material_code_kedatech = fields.Char(string="Material Code")
     material_type_kedatech = fields.Selection([
         ('fabric_type', 'Fabric'),
@@ -23,7 +23,7 @@ class KedatechMaterial(models.Model):
         default=lambda self: self.env.company.currency_id.id,
         required=True
     )
-    supplier_id_kedatech = fields.Many2one('res.partner', string="Supplier's Name")
+    supplier_id_kedatech = fields.Many2one('res.partner', string="Supplier's Name", required=True)
 
     @api.constrains('material_price_kedatech')
     def _check_material_price(self):
