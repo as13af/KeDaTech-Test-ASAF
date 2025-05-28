@@ -26845,3 +26845,198 @@ ERROR: current transaction is aborted, commands ignored until end of transaction
 2025-05-28 16:36:53,751 19972 INFO KedatechDatabase werkzeug: 127.0.0.1 - - [28/May/2025 16:36:53] "POST /longpolling/poll HTTP/1.1" 200 - 8 0.042 50.078
 2025-05-28 16:37:23,507 19972 INFO KedatechDatabase werkzeug: 127.0.0.1 - - [28/May/2025 16:37:23] "POST /longpolling/poll HTTP/1.1" 200 - 8 0.003 50.084
 2025-05-28 16:37:24,081 19972 INFO KedatechDatabase werkzeug: 127.0.0.1 - - [28/May/2025 16:37:24] "POST /longpolling/im_status HTTP/1.1" 200 - 3 0.003 0.004
+2025-05-28 16:39:20,051 20472 INFO ? odoo: Odoo version 14.0-20231205 
+2025-05-28 16:39:20,052 20472 INFO ? odoo: Using configuration file at F:\KeDaTech-Test-ASAF\kedatech_ASAF_Test.conf 
+2025-05-28 16:39:20,052 20472 INFO ? odoo: addons paths: ['C:\\Program Files\\Odoo 14.0.20231205\\server\\odoo\\addons', 'c:\\users\\pc\\appdata\\local\\openerp s.a\\odoo\\addons\\14.0', 'c:\\program files\\odoo 14.0.20231205\\server\\odoo\\addons', 'f:\\kedatech-test-asaf\\addons_custom'] 
+2025-05-28 16:39:20,052 20472 INFO ? odoo: database: openpg@localhost:5432 
+2025-05-28 16:39:20,583 20472 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at C:\Program Files\Odoo 14.0.20231205\thirdparty\wkhtmltopdf.exe 
+2025-05-28 16:39:20,817 20472 INFO ? odoo.service.server: HTTP service (werkzeug) running on AS13AF:8069 
+2025-05-28 16:39:20,962 20472 INFO KedatechDatabase odoo.modules.loading: loading 1 modules... 
+2025-05-28 16:39:21,250 20472 INFO KedatechDatabase odoo.modules.loading: 1 modules loaded in 0.02s, 0 queries (+0 extra) 
+2025-05-28 16:39:21,414 20472 INFO KedatechDatabase odoo.modules.loading: updating modules list 
+2025-05-28 16:39:21,418 20472 INFO KedatechDatabase odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a 
+2025-05-28 16:39:22,752 20472 INFO KedatechDatabase odoo.addons.base.models.ir_module: ALLOW access to module.button_upgrade on ['KeDATech Material Test'] to user __system__ #1 via n/a 
+2025-05-28 16:39:22,752 20472 INFO KedatechDatabase odoo.addons.base.models.ir_module: ALLOW access to module.update_list on ['KeDATech Material Test'] to user __system__ #1 via n/a 
+2025-05-28 16:39:23,999 20472 INFO KedatechDatabase odoo.addons.base.models.ir_module: ALLOW access to module.button_install on [] to user __system__ #1 via n/a 
+2025-05-28 16:39:24,094 20472 INFO KedatechDatabase odoo.modules.loading: loading 45 modules... 
+2025-05-28 16:39:24,094 20472 INFO KedatechDatabase odoo.modules.loading: Loading module kedatech_test_material (2/45) 
+2025-05-28 16:39:24,158 20472 INFO KedatechDatabase odoo.modules.registry: module kedatech_test_material: creating or updating database tables 
+2025-05-28 16:39:24,370 20472 INFO KedatechDatabase odoo.modules.loading: loading kedatech_test_material/views/kedatech_material_views.xml 
+2025-05-28 16:39:24,654 20472 INFO KedatechDatabase odoo.modules.loading: Module kedatech_test_material: loading demo 
+2025-05-28 16:39:24,697 20472 INFO KedatechDatabase odoo.modules.loading: Module kedatech_test_material loaded in 0.60s, 186 queries 
+2025-05-28 16:39:24,851 20472 WARNING KedatechDatabase py.warnings: C:\Program Files\Odoo 14.0.20231205\python\lib\site-packages\jinja2\sandbox.py:82: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3,and in 3.9 it will stop working
+  from collections import MutableSet, MutableMapping, MutableSequence
+ 
+2025-05-28 16:39:25,521 20472 INFO ? odoo.http: HTTP Configuring static files 
+2025-05-28 16:39:25,561 20472 INFO KedatechDatabase odoo.modules.loading: 45 modules loaded in 1.47s, 186 queries (+0 extra) 
+2025-05-28 16:39:26,248 20472 WARNING KedatechDatabase odoo.modules.loading: The model kedatech.material has no access rules, consider adding one. E.g. access_kedatech_material,access_kedatech_material,model_kedatech_material,base.group_user,1,0,0,0 
+2025-05-28 16:39:26,433 20472 INFO KedatechDatabase odoo.modules.registry: verifying fields for every extended model 
+2025-05-28 16:39:27,221 20472 INFO KedatechDatabase odoo.modules.loading: Modules loaded. 
+2025-05-28 16:39:27,277 20472 INFO KedatechDatabase odoo.service.server: Starting post tests 
+2025-05-28 16:39:27,277 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.tests.test_material: Starting TestKedatechMaterial.test_currency_default ... 
+2025-05-28 16:39:27,336 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.tests.test_material: Setting up TestKedatechMaterial test case... 
+2025-05-28 16:39:27,346 20472 INFO KedatechDatabase odoo.addons.base.models.ir_http: Generating routing map for key None 
+2025-05-28 16:39:27,362 20472 INFO KedatechDatabase odoo.addons.base.models.ir_http: Generating routing map for key None 
+2025-05-28 16:39:28,679 20472 INFO KedatechDatabase werkzeug: 127.0.0.1 - - [28/May/2025 16:39:28] "POST /web/webclient/version_info HTTP/1.1" 200 - 2 0.016 3.102
+2025-05-28 16:39:28,712 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.tests.test_material: Created test supplier with id 125 and name 'Test Supplier' 
+2025-05-28 16:39:28,713 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.tests.test_material: Predefined material values set. 
+2025-05-28 16:39:28,715 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.tests.test_material: Starting test_currency_default... 
+2025-05-28 16:39:28,715 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.models.kedatech_materials: Creating KedatechMaterial with values: {'name': 'Test Material', 'material_type_kedatech': 'fabric_type', 'material_price_kedatech': 150.0, 'supplier_id_kedatech': 125} 
+2025-05-28 16:39:28,735 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.models.kedatech_materials: Generated material code: FBC-TM-146 
+2025-05-28 16:39:28,737 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.tests.test_material: Material created with currency: USD 
+2025-05-28 16:39:28,737 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.tests.test_material: test_currency_default passed. 
+2025-05-28 16:39:28,751 20472 INFO ? odoo.addons.bus.models.bus: Bus.loop listen imbus on db postgres 
+2025-05-28 16:39:28,912 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.tests.test_material: Starting TestKedatechMaterial.test_material_code_generation ... 
+2025-05-28 16:39:28,913 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.tests.test_material: Setting up TestKedatechMaterial test case... 
+2025-05-28 16:39:29,350 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.tests.test_material: Created test supplier with id 126 and name 'Test Supplier' 
+2025-05-28 16:39:29,350 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.tests.test_material: Predefined material values set. 
+2025-05-28 16:39:29,350 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.tests.test_material: Starting test_material_code_generation... 
+2025-05-28 16:39:29,350 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.models.kedatech_materials: Creating KedatechMaterial with values: {'name': 'Test Material', 'material_type_kedatech': 'fabric_type', 'material_price_kedatech': 150.0, 'supplier_id_kedatech': 126} 
+2025-05-28 16:39:29,370 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.models.kedatech_materials: Generated material code: FBC-TM-147 
+2025-05-28 16:39:29,370 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.tests.test_material: Material code generated: FBC-TM-147 
+2025-05-28 16:39:29,370 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.models.kedatech_materials: Creating KedatechMaterial with values: {'name': 'Test Material', 'material_type_kedatech': 'jeans_type', 'material_price_kedatech': 150.0, 'supplier_id_kedatech': 126} 
+2025-05-28 16:39:29,370 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.models.kedatech_materials: Generated material code: JNS-TM-148 
+2025-05-28 16:39:29,370 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.tests.test_material: Material created with type jeans_type, code: JNS-TM-148 
+2025-05-28 16:39:29,370 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.models.kedatech_materials: Creating KedatechMaterial with values: {'name': 'Test Material', 'material_type_kedatech': 'cotton_type', 'material_price_kedatech': 150.0, 'supplier_id_kedatech': 126} 
+2025-05-28 16:39:29,370 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.models.kedatech_materials: Generated material code: CTN-TM-149 
+2025-05-28 16:39:29,370 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.tests.test_material: Material created with type cotton_type, code: CTN-TM-149 
+2025-05-28 16:39:29,370 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.models.kedatech_materials: Creating KedatechMaterial with values: {'name': 'Premium Cotton Blend', 'material_type_kedatech': 'fabric_type', 'material_price_kedatech': 150.0, 'supplier_id_kedatech': 126} 
+2025-05-28 16:39:29,370 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.models.kedatech_materials: Generated material code: FBC-PCB-150 
+2025-05-28 16:39:29,370 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.tests.test_material: Material with multi-word name code initials: PCB 
+2025-05-28 16:39:29,370 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.tests.test_material: test_material_code_generation passed. 
+2025-05-28 16:39:29,385 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.tests.test_material: Starting TestKedatechMaterial.test_material_creation ... 
+2025-05-28 16:39:29,385 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.tests.test_material: Setting up TestKedatechMaterial test case... 
+2025-05-28 16:39:29,457 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.tests.test_material: Created test supplier with id 127 and name 'Test Supplier' 
+2025-05-28 16:39:29,457 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.tests.test_material: Predefined material values set. 
+2025-05-28 16:39:29,457 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.tests.test_material: Starting test_material_creation... 
+2025-05-28 16:39:29,457 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.models.kedatech_materials: Creating KedatechMaterial with values: {'name': 'Test Material', 'material_type_kedatech': 'fabric_type', 'material_price_kedatech': 150.0, 'supplier_id_kedatech': 127} 
+2025-05-28 16:39:29,464 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.models.kedatech_materials: Generated material code: FBC-TM-151 
+2025-05-28 16:39:29,464 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.tests.test_material: Created material with id 151 and name 'Test Material' 
+2025-05-28 16:39:29,464 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.tests.test_material: test_material_creation passed. 
+2025-05-28 16:39:29,472 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.tests.test_material: Starting TestKedatechMaterial.test_missing_material_type_code_generation ... 
+2025-05-28 16:39:29,472 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.tests.test_material: Setting up TestKedatechMaterial test case... 
+2025-05-28 16:39:29,556 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.tests.test_material: Created test supplier with id 128 and name 'Test Supplier' 
+2025-05-28 16:39:29,556 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.tests.test_material: Predefined material values set. 
+2025-05-28 16:39:29,557 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.tests.test_material: Starting test_missing_material_type_code_generation... 
+2025-05-28 16:39:29,557 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.models.kedatech_materials: Creating KedatechMaterial with values: {'name': 'Test Material', 'material_price_kedatech': 150.0, 'supplier_id_kedatech': 128} 
+2025-05-28 16:39:29,567 20472 WARNING KedatechDatabase odoo.addons.kedatech_test_material.models.kedatech_materials: Material type or name missing. Set material code as: UNK-UNK-152 
+2025-05-28 16:39:29,568 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.tests.test_material: Material code with missing type: UNK-UNK-152 
+2025-05-28 16:39:29,573 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.tests.test_material: ====================================================================== 
+2025-05-28 16:39:29,573 20472 ERROR KedatechDatabase odoo.addons.kedatech_test_material.tests.test_material: FAIL: TestKedatechMaterial.test_missing_material_type_code_generation
+Traceback (most recent call last):
+  File "f:\kedatech-test-asaf\addons_custom\kedatech_test_material\tests\test_material.py", line 71, in test_missing_material_type_code_generation
+    self.assertEqual(code_parts[1], 'TM', "Should still generate name initials")
+AssertionError: 'UNK' != 'TM'
+- UNK
++ TM
+ : Should still generate name initials
+ 
+2025-05-28 16:39:29,573 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.tests.test_material: Starting TestKedatechMaterial.test_price_constraint ... 
+2025-05-28 16:39:29,573 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.tests.test_material: Setting up TestKedatechMaterial test case... 
+2025-05-28 16:39:29,615 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.tests.test_material: Created test supplier with id 129 and name 'Test Supplier' 
+2025-05-28 16:39:29,615 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.tests.test_material: Predefined material values set. 
+2025-05-28 16:39:29,615 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.tests.test_material: Starting test_price_constraint... 
+2025-05-28 16:39:29,615 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.models.kedatech_materials: Creating KedatechMaterial with values: {'name': 'Test Material', 'material_type_kedatech': 'fabric_type', 'material_price_kedatech': 150.0, 'supplier_id_kedatech': 129} 
+2025-05-28 16:39:29,631 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.models.kedatech_materials: Generated material code: FBC-TM-153 
+2025-05-28 16:39:29,631 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.tests.test_material: Material created with valid price: 150.0 
+2025-05-28 16:39:29,631 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.tests.test_material: Attempting to create material with invalid price: 99.0 
+2025-05-28 16:39:29,631 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.models.kedatech_materials: Creating KedatechMaterial with values: {'name': 'Test Material', 'material_type_kedatech': 'fabric_type', 'material_price_kedatech': 99.0, 'supplier_id_kedatech': 129} 
+2025-05-28 16:39:29,640 20472 ERROR KedatechDatabase odoo.addons.kedatech_test_material.models.kedatech_materials: Validation error: material price 99.0 is less than 100. 
+2025-05-28 16:39:29,640 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.models.kedatech_materials: Creating KedatechMaterial with values: {'name': 'Test Material', 'material_type_kedatech': 'fabric_type', 'material_price_kedatech': 150.0, 'supplier_id_kedatech': 129} 
+2025-05-28 16:39:29,647 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.models.kedatech_materials: Generated material code: FBC-TM-155 
+2025-05-28 16:39:29,647 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.tests.test_material: Attempting to update material id 155 with invalid price 50.0 
+2025-05-28 16:39:29,647 20472 ERROR KedatechDatabase odoo.addons.kedatech_test_material.models.kedatech_materials: Validation error: material price 50.0 is less than 100. 
+2025-05-28 16:39:29,647 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.tests.test_material: test_price_constraint passed. 
+2025-05-28 16:39:29,647 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.tests.test_material: Starting TestKedatechMaterial.test_required_fields ... 
+2025-05-28 16:39:29,647 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.tests.test_material: Setting up TestKedatechMaterial test case... 
+2025-05-28 16:39:29,712 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.tests.test_material: Created test supplier with id 130 and name 'Test Supplier' 
+2025-05-28 16:39:29,712 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.tests.test_material: Predefined material values set. 
+2025-05-28 16:39:29,712 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.tests.test_material: Starting test_required_fields... 
+2025-05-28 16:39:29,712 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.tests.test_material: Attempting to create material without name 
+2025-05-28 16:39:29,712 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.models.kedatech_materials: Creating KedatechMaterial with values: {'material_type_kedatech': 'fabric_type', 'material_price_kedatech': 150.0, 'supplier_id_kedatech': 130} 
+2025-05-28 16:39:29,726 20472 ERROR KedatechDatabase odoo.sql_db: bad query: INSERT INTO "kedatech_material" ("id", "create_uid", "create_date", "write_uid", "write_date", "currency_id_kedatech", "material_price_kedatech", "material_type_kedatech", "supplier_id_kedatech") VALUES (nextval('kedatech_material_id_seq'), 1, (now() at time zone 'UTC'), 1, (now() at time zone 'UTC'), 2, 150.0, 'fabric_type', 130) RETURNING id
+ERROR: null value in column "name" violates not-null constraint
+DETAIL:  Failing row contains (156, null, fabric_type, 150, 2, 130, 1, 2025-05-28 09:39:29.658005, 1, 2025-05-28 09:39:29.658005, null).
+ 
+2025-05-28 16:39:29,726 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.tests.test_material: Attempting to create material without supplier 
+2025-05-28 16:39:29,726 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.models.kedatech_materials: Creating KedatechMaterial with values: {'name': 'Test Material', 'material_type_kedatech': 'fabric_type', 'material_price_kedatech': 150.0} 
+2025-05-28 16:39:29,735 20472 ERROR KedatechDatabase odoo.sql_db: bad query: SELECT "res_users"."id" as "id", "res_users"."partner_id" as "partner_id", "res_users"."login" as "login", "res_users"."signature" as "signature", "res_users"."active" as "active", "res_users"."action_id" as "action_id", "res_users"."share" as "share", "res_users"."company_id" as "company_id", "res_users"."notification_type" as "notification_type", "res_users"."odoobot_state" as "odoobot_state", "res_users"."odoobot_failed" as "odoobot_failed", "res_users"."sale_team_id" as "sale_team_id", "res_users"."create_uid" as "create_uid", "res_users"."create_date" as "create_date", "res_users"."write_uid" as "write_uid", "res_users"."write_date" as "write_date" FROM "res_users" WHERE "res_users".id IN (1)
+ERROR: current transaction is aborted, commands ignored until end of transaction block
+ 
+2025-05-28 16:39:29,735 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.tests.test_material: Attempting to create material without price 
+2025-05-28 16:39:29,735 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.models.kedatech_materials: Creating KedatechMaterial with values: {'name': 'Test Material', 'material_type_kedatech': 'fabric_type', 'supplier_id_kedatech': 130} 
+2025-05-28 16:39:29,742 20472 ERROR KedatechDatabase odoo.sql_db: bad query: SELECT "res_users"."id" as "id", "res_users"."partner_id" as "partner_id", "res_users"."login" as "login", "res_users"."signature" as "signature", "res_users"."active" as "active", "res_users"."action_id" as "action_id", "res_users"."share" as "share", "res_users"."company_id" as "company_id", "res_users"."notification_type" as "notification_type", "res_users"."odoobot_state" as "odoobot_state", "res_users"."odoobot_failed" as "odoobot_failed", "res_users"."sale_team_id" as "sale_team_id", "res_users"."create_uid" as "create_uid", "res_users"."create_date" as "create_date", "res_users"."write_uid" as "write_uid", "res_users"."write_date" as "write_date" FROM "res_users" WHERE "res_users".id IN (1)
+ERROR: current transaction is aborted, commands ignored until end of transaction block
+ 
+2025-05-28 16:39:29,742 20472 INFO KedatechDatabase odoo.addons.kedatech_test_material.tests.test_material: test_required_fields passed. 
+2025-05-28 16:39:29,745 20472 INFO KedatechDatabase odoo.service.server: 6 post-tests in 2.47s, 262 queries 
+2025-05-28 16:39:48,333 20472 INFO KedatechDatabase werkzeug: 127.0.0.1 - - [28/May/2025 16:39:48] "GET /web HTTP/1.1" 200 - 304 0.149 1.078
+2025-05-28 16:39:48,721 20472 INFO KedatechDatabase werkzeug: 127.0.0.1 - - [28/May/2025 16:39:48] "GET /web/content/418-799b381/web.assets_common.css HTTP/1.1" 200 - 2 0.007 0.057
+2025-05-28 16:39:48,722 20472 INFO KedatechDatabase werkzeug: 127.0.0.1 - - [28/May/2025 16:39:48] "GET /web/content/419-238d5f6/web.assets_backend.css HTTP/1.1" 200 - 2 0.004 0.056
+2025-05-28 16:39:48,769 20472 INFO KedatechDatabase werkzeug: 127.0.0.1 - - [28/May/2025 16:39:48] "GET /web/webclient/load_menus/1486fe5cdc46f00806658059f16554521993aa945a8442ac660c6649ff331b31 HTTP/1.1" 200 - 1 0.001 0.076
+2025-05-28 16:39:48,771 20472 INFO KedatechDatabase werkzeug: 127.0.0.1 - - [28/May/2025 16:39:48] "GET /web/content/420-799b381/web.assets_common.js HTTP/1.1" 200 - 2 0.010 0.092
+2025-05-28 16:39:48,772 20472 INFO KedatechDatabase werkzeug: 127.0.0.1 - - [28/May/2025 16:39:48] "GET /web/content/421-238d5f6/web.assets_backend.js HTTP/1.1" 200 - 2 0.011 0.082
+2025-05-28 16:39:48,775 20472 INFO KedatechDatabase werkzeug: 127.0.0.1 - - [28/May/2025 16:39:48] "GET /web/content/422-10044d7/web.assets_backend_prod_only.js HTTP/1.1" 200 - 2 0.013 0.071
+2025-05-28 16:39:49,174 20472 INFO KedatechDatabase werkzeug: 127.0.0.1 - - [28/May/2025 16:39:49] "GET /web/webclient/qweb/2a583f31b0c624b7a357353f54de7afabea575e5f774319c02affccc99fdc333?mods=base,web,base_setup,bus,web_tour,mail,sales_team,product,web_editor,http_routing,auth_signup,portal,resource,digest,account,payment,utm,sale,sale_management,kedatech_test_material,account_check_printing,auth_totp,auth_totp_portal,base_import,iap,l10n_generic_coa,l10n_us,mail_bot,partner_autocomplete,payment_transfer,sms,snailmail,snailmail_account,web_kanban_gauge,web_unsplash HTTP/1.1" 200 - 1 0.001 0.048
+2025-05-28 16:39:49,192 20472 INFO KedatechDatabase werkzeug: 127.0.0.1 - - [28/May/2025 16:39:49] "GET /web/content/423-ab717a4/web.assets_tests.js HTTP/1.1" 200 - 2 0.002 0.009
+2025-05-28 16:39:49,390 20472 INFO KedatechDatabase werkzeug: 127.0.0.1 - - [28/May/2025 16:39:49] "GET /web/webclient/translations/5227498d9df4b403b0244c75aac21e0c091e50ce?mods=base%2Cweb%2Cbase_setup%2Cbus%2Cweb_tour%2Cmail%2Csales_team%2Cproduct%2Cweb_editor%2Chttp_routing%2Cauth_signup%2Cportal%2Cresource%2Cdigest%2Caccount%2Cpayment%2Cutm%2Csale%2Csale_management%2Ckedatech_test_material%2Caccount_check_printing%2Cauth_totp%2Cauth_totp_portal%2Cbase_import%2Ciap%2Cl10n_generic_coa%2Cl10n_us%2Cmail_bot%2Cpartner_autocomplete%2Cpayment_transfer%2Csms%2Csnailmail%2Csnailmail_account%2Cweb_kanban_gauge%2Cweb_unsplash&lang=en_US HTTP/1.1" 200 - 3 0.001 0.009
+2025-05-28 16:39:49,509 20472 INFO ? werkzeug: 127.0.0.1 - - [28/May/2025 16:39:49] "GET /web/static/lib/fontawesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 304 - - - -
+2025-05-28 16:39:49,519 20472 INFO ? werkzeug: 127.0.0.1 - - [28/May/2025 16:39:49] "GET /web/static/src/img/favicon.ico HTTP/1.1" 304 - - - -
+2025-05-28 16:39:49,773 20472 INFO ? werkzeug: 127.0.0.1 - - [28/May/2025 16:39:49] "GET /web/static/src/xml/debug.xml?debug=1748425189445 HTTP/1.1" 200 - - - -
+2025-05-28 16:39:49,797 20472 INFO KedatechDatabase werkzeug: 127.0.0.1 - - [28/May/2025 16:39:49] "POST /web/dataset/call_kw/res.users/systray_get_activities HTTP/1.1" 200 - 2 0.005 0.014
+2025-05-28 16:39:49,866 20472 INFO KedatechDatabase werkzeug: 127.0.0.1 - - [28/May/2025 16:39:49] "GET /web/image/res.company/1/favicon/ HTTP/1.1" 200 - 4 0.004 0.029
+2025-05-28 16:39:49,868 20472 INFO KedatechDatabase werkzeug: 127.0.0.1 - - [28/May/2025 16:39:49] "POST /web/dataset/call_kw/ir.rule/check_access_rights HTTP/1.1" 200 - 1 0.001 0.023
+2025-05-28 16:39:49,874 20472 INFO KedatechDatabase werkzeug: 127.0.0.1 - - [28/May/2025 16:39:49] "POST /mail/init_messaging HTTP/1.1" 200 - 48 0.080 0.058
+2025-05-28 16:39:50,096 20472 INFO KedatechDatabase werkzeug: 127.0.0.1 - - [28/May/2025 16:39:50] "POST /web/dataset/call_kw/ir.model.access/check_access_rights HTTP/1.1" 200 - 1 0.000 0.005
+2025-05-28 16:39:50,115 20472 INFO KedatechDatabase werkzeug: 127.0.0.1 - - [28/May/2025 16:39:50] "POST /web/dataset/call_kw/ir.ui.view/check_access_rights HTTP/1.1" 200 - 1 0.000 0.006
+2025-05-28 16:39:50,171 20472 INFO KedatechDatabase werkzeug: 127.0.0.1 - - [28/May/2025 16:39:50] "POST /longpolling/im_status HTTP/1.1" 200 - 3 0.000 0.000
+2025-05-28 16:39:50,234 20472 INFO KedatechDatabase werkzeug: 127.0.0.1 - - [28/May/2025 16:39:50] "POST /web/action/load HTTP/1.1" 200 - 9 0.014 0.012
+2025-05-28 16:39:50,471 20472 INFO KedatechDatabase werkzeug: 127.0.0.1 - - [28/May/2025 16:39:50] "POST /web/dataset/call_kw/mail.message/load_views HTTP/1.1" 200 - 18 0.000 0.033
+2025-05-28 16:39:50,578 20472 INFO KedatechDatabase werkzeug: 127.0.0.1 - - [28/May/2025 16:39:50] "POST /web/dataset/call_kw/mail.message/message_fetch HTTP/1.1" 200 - 5 0.014 0.009
+2025-05-28 16:39:50,862 20472 INFO KedatechDatabase werkzeug: 127.0.0.1 - - [28/May/2025 16:39:50] "GET /web/image?model=res.users&field=image_128&id=1 HTTP/1.1" 200 - 5 0.000 0.016
+2025-05-28 16:39:51,755 20472 INFO KedatechDatabase werkzeug: 127.0.0.1 - - [28/May/2025 16:39:51] "GET /web HTTP/1.1" 200 - 15 0.004 0.079
+2025-05-28 16:39:52,130 20472 INFO KedatechDatabase werkzeug: 127.0.0.1 - - [28/May/2025 16:39:52] "GET /web/content/418-799b381/web.assets_common.css HTTP/1.1" 200 - 2 0.003 0.040
+2025-05-28 16:39:52,135 20472 INFO KedatechDatabase werkzeug: 127.0.0.1 - - [28/May/2025 16:39:52] "GET /web/content/419-238d5f6/web.assets_backend.css HTTP/1.1" 200 - 2 0.002 0.045
+2025-05-28 16:39:52,154 20472 INFO KedatechDatabase werkzeug: 127.0.0.1 - - [28/May/2025 16:39:52] "GET /web/content/420-799b381/web.assets_common.js HTTP/1.1" 200 - 2 0.012 0.055
+2025-05-28 16:39:52,184 20472 INFO KedatechDatabase werkzeug: 127.0.0.1 - - [28/May/2025 16:39:52] "GET /web/content/421-238d5f6/web.assets_backend.js HTTP/1.1" 200 - 2 0.015 0.056
+2025-05-28 16:39:52,187 20472 INFO KedatechDatabase werkzeug: 127.0.0.1 - - [28/May/2025 16:39:52] "GET /web/webclient/load_menus/1486fe5cdc46f00806658059f16554521993aa945a8442ac660c6649ff331b31 HTTP/1.1" 200 - 1 0.002 0.031
+2025-05-28 16:39:52,188 20472 INFO KedatechDatabase werkzeug: 127.0.0.1 - - [28/May/2025 16:39:52] "GET /web/content/422-10044d7/web.assets_backend_prod_only.js HTTP/1.1" 200 - 2 0.000 0.068
+2025-05-28 16:39:52,568 20472 INFO KedatechDatabase werkzeug: 127.0.0.1 - - [28/May/2025 16:39:52] "GET /web/webclient/qweb/2a583f31b0c624b7a357353f54de7afabea575e5f774319c02affccc99fdc333?mods=base,web,base_setup,bus,web_tour,mail,sales_team,product,web_editor,http_routing,auth_signup,portal,resource,digest,account,payment,utm,sale,sale_management,kedatech_test_material,account_check_printing,auth_totp,auth_totp_portal,base_import,iap,l10n_generic_coa,l10n_us,mail_bot,partner_autocomplete,payment_transfer,sms,snailmail,snailmail_account,web_kanban_gauge,web_unsplash HTTP/1.1" 200 - 1 0.000 0.050
+2025-05-28 16:39:52,584 20472 INFO KedatechDatabase werkzeug: 127.0.0.1 - - [28/May/2025 16:39:52] "GET /web/content/423-ab717a4/web.assets_tests.js HTTP/1.1" 200 - 2 0.001 0.009
+2025-05-28 16:39:52,786 20472 INFO KedatechDatabase werkzeug: 127.0.0.1 - - [28/May/2025 16:39:52] "GET /web/webclient/translations/5227498d9df4b403b0244c75aac21e0c091e50ce?mods=base%2Cweb%2Cbase_setup%2Cbus%2Cweb_tour%2Cmail%2Csales_team%2Cproduct%2Cweb_editor%2Chttp_routing%2Cauth_signup%2Cportal%2Cresource%2Cdigest%2Caccount%2Cpayment%2Cutm%2Csale%2Csale_management%2Ckedatech_test_material%2Caccount_check_printing%2Cauth_totp%2Cauth_totp_portal%2Cbase_import%2Ciap%2Cl10n_generic_coa%2Cl10n_us%2Cmail_bot%2Cpartner_autocomplete%2Cpayment_transfer%2Csms%2Csnailmail%2Csnailmail_account%2Cweb_kanban_gauge%2Cweb_unsplash&lang=en_US HTTP/1.1" 200 - 3 0.001 0.004
+2025-05-28 16:39:52,900 20472 INFO ? werkzeug: 127.0.0.1 - - [28/May/2025 16:39:52] "GET /web/static/lib/fontawesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 - - - -
+2025-05-28 16:39:52,906 20472 INFO ? werkzeug: 127.0.0.1 - - [28/May/2025 16:39:52] "GET /web/static/src/img/favicon.ico HTTP/1.1" 200 - - - -
+2025-05-28 16:39:53,173 20472 INFO ? werkzeug: 127.0.0.1 - - [28/May/2025 16:39:53] "GET /web/static/src/xml/debug.xml?debug=1748425192825 HTTP/1.1" 200 - - - -
+2025-05-28 16:39:53,183 20472 INFO KedatechDatabase werkzeug: 127.0.0.1 - - [28/May/2025 16:39:53] "POST /web/dataset/call_kw/res.users/systray_get_activities HTTP/1.1" 200 - 2 0.010 0.022
+2025-05-28 16:39:53,239 20472 INFO KedatechDatabase werkzeug: 127.0.0.1 - - [28/May/2025 16:39:53] "POST /mail/init_messaging HTTP/1.1" 200 - 37 0.034 0.072
+2025-05-28 16:39:53,271 20472 INFO KedatechDatabase werkzeug: 127.0.0.1 - - [28/May/2025 16:39:53] "POST /web/dataset/call_kw/ir.rule/check_access_rights HTTP/1.1" 200 - 1 0.000 0.035
+2025-05-28 16:39:53,271 20472 INFO KedatechDatabase werkzeug: 127.0.0.1 - - [28/May/2025 16:39:53] "GET /web/image/res.company/1/favicon/ HTTP/1.1" 200 - 4 0.017 0.025
+2025-05-28 16:39:53,492 20472 INFO KedatechDatabase werkzeug: 127.0.0.1 - - [28/May/2025 16:39:53] "POST /web/dataset/call_kw/ir.model.access/check_access_rights HTTP/1.1" 200 - 1 0.000 0.005
+2025-05-28 16:39:53,503 20472 INFO KedatechDatabase werkzeug: 127.0.0.1 - - [28/May/2025 16:39:53] "POST /web/dataset/call_kw/ir.ui.view/check_access_rights HTTP/1.1" 200 - 1 0.000 0.006
+2025-05-28 16:39:53,557 20472 INFO KedatechDatabase werkzeug: 127.0.0.1 - - [28/May/2025 16:39:53] "POST /longpolling/im_status HTTP/1.1" 200 - 3 0.000 0.000
+2025-05-28 16:39:53,603 20472 INFO KedatechDatabase werkzeug: 127.0.0.1 - - [28/May/2025 16:39:53] "POST /web/action/load HTTP/1.1" 200 - 9 0.000 0.017
+2025-05-28 16:39:53,836 20472 INFO KedatechDatabase werkzeug: 127.0.0.1 - - [28/May/2025 16:39:53] "POST /web/dataset/call_kw/mail.message/load_views HTTP/1.1" 200 - 8 0.000 0.016
+2025-05-28 16:39:53,953 20472 INFO KedatechDatabase werkzeug: 127.0.0.1 - - [28/May/2025 16:39:53] "POST /web/dataset/call_kw/mail.message/message_fetch HTTP/1.1" 200 - 3 0.002 0.031
+2025-05-28 16:39:54,216 20472 INFO KedatechDatabase werkzeug: 127.0.0.1 - - [28/May/2025 16:39:54] "GET /web/image?model=res.users&field=image_128&id=1 HTTP/1.1" 304 - 5 0.003 0.015
+2025-05-28 16:40:18,764 20472 INFO KedatechDatabase werkzeug: 127.0.0.1 - - [28/May/2025 16:40:18] "POST /longpolling/poll HTTP/1.1" 200 - 8 0.051 52.780
+2025-05-28 16:40:39,817 20472 INFO KedatechDatabase werkzeug: 127.0.0.1 - - [28/May/2025 16:40:39] "POST /longpolling/poll HTTP/1.1" 200 - 8 0.018 50.062
+2025-05-28 16:40:43,211 20472 INFO KedatechDatabase werkzeug: 127.0.0.1 - - [28/May/2025 16:40:43] "POST /longpolling/poll HTTP/1.1" 200 - 8 0.011 50.062
+2025-05-28 16:40:43,902 20472 INFO KedatechDatabase werkzeug: 127.0.0.1 - - [28/May/2025 16:40:43] "POST /longpolling/im_status HTTP/1.1" 200 - 3 0.000 0.000
+2025-05-28 16:41:33,581 20472 INFO KedatechDatabase werkzeug: 127.0.0.1 - - [28/May/2025 16:41:33] "POST /longpolling/poll HTTP/1.1" 200 - 8 0.014 50.025
+2025-05-28 16:41:34,922 20472 INFO KedatechDatabase werkzeug: 127.0.0.1 - - [28/May/2025 16:41:34] "POST /longpolling/im_status HTTP/1.1" 200 - 3 0.000 0.008
+2025-05-28 16:42:23,965 20472 INFO KedatechDatabase werkzeug: 127.0.0.1 - - [28/May/2025 16:42:23] "POST /longpolling/poll HTTP/1.1" 200 - 8 0.000 50.068
+2025-05-28 16:42:25,904 20472 INFO KedatechDatabase werkzeug: 127.0.0.1 - - [28/May/2025 16:42:25] "POST /longpolling/im_status HTTP/1.1" 200 - 3 0.000 0.004
+2025-05-28 16:43:14,303 20472 INFO KedatechDatabase werkzeug: 127.0.0.1 - - [28/May/2025 16:43:14] "POST /longpolling/poll HTTP/1.1" 200 - 8 0.000 50.018
+2025-05-28 16:43:16,911 20472 INFO KedatechDatabase werkzeug: 127.0.0.1 - - [28/May/2025 16:43:16] "POST /longpolling/im_status HTTP/1.1" 200 - 3 0.000 0.000
+2025-05-28 16:44:04,674 20472 INFO KedatechDatabase werkzeug: 127.0.0.1 - - [28/May/2025 16:44:04] "POST /longpolling/poll HTTP/1.1" 200 - 8 0.000 50.057
+2025-05-28 16:44:07,902 20472 INFO KedatechDatabase werkzeug: 127.0.0.1 - - [28/May/2025 16:44:07] "POST /longpolling/im_status HTTP/1.1" 200 - 3 0.000 0.000
+2025-05-28 16:44:54,997 20472 INFO KedatechDatabase werkzeug: 127.0.0.1 - - [28/May/2025 16:44:54] "POST /longpolling/poll HTTP/1.1" 200 - 8 0.000 50.008
+2025-05-28 16:44:58,914 20472 INFO KedatechDatabase werkzeug: 127.0.0.1 - - [28/May/2025 16:44:58] "POST /longpolling/im_status HTTP/1.1" 200 - 3 0.000 0.000
+2025-05-28 16:45:45,375 20472 INFO KedatechDatabase werkzeug: 127.0.0.1 - - [28/May/2025 16:45:45] "POST /longpolling/poll HTTP/1.1" 200 - 8 0.000 50.066
+2025-05-28 16:45:49,902 20472 INFO KedatechDatabase werkzeug: 127.0.0.1 - - [28/May/2025 16:45:49] "POST /longpolling/im_status HTTP/1.1" 200 - 3 0.000 0.000
+2025-05-28 16:46:35,708 20472 INFO KedatechDatabase werkzeug: 127.0.0.1 - - [28/May/2025 16:46:35] "POST /longpolling/poll HTTP/1.1" 200 - 8 0.006 50.011
+2025-05-28 16:46:40,908 20472 INFO KedatechDatabase werkzeug: 127.0.0.1 - - [28/May/2025 16:46:40] "POST /longpolling/im_status HTTP/1.1" 200 - 3 0.000 0.000
+2025-05-28 16:47:26,079 20472 INFO KedatechDatabase werkzeug: 127.0.0.1 - - [28/May/2025 16:47:26] "POST /longpolling/poll HTTP/1.1" 200 - 8 0.000 50.052
+2025-05-28 16:47:32,222 20472 INFO KedatechDatabase werkzeug: 127.0.0.1 - - [28/May/2025 16:47:32] "POST /longpolling/im_status HTTP/1.1" 200 - 3 0.003 0.005
+2025-05-28 16:48:16,459 20472 INFO KedatechDatabase werkzeug: 127.0.0.1 - - [28/May/2025 16:48:16] "POST /longpolling/poll HTTP/1.1" 200 - 8 0.007 50.052
+2025-05-28 16:48:23,237 20472 INFO KedatechDatabase werkzeug: 127.0.0.1 - - [28/May/2025 16:48:23] "POST /longpolling/im_status HTTP/1.1" 200 - 3 0.001 0.010

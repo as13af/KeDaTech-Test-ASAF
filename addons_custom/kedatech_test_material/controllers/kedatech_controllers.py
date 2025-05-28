@@ -9,7 +9,11 @@ class KedatechMaterialController(http.Controller):
 
     @http.route('/api/materials', type='json', auth='user', methods=['GET'], csrf=False)
     def get_all_materials(self, **kwargs):
-        materials = request.env['kedatech.material'].sudo().search([])
+        material_type = kwargs.get('material_type')
+        domain = []
+        if material_type:
+            domain.append(('material_type_kedatech', '=', material_type))
+        materials = request.env['kedatech.material'].sudo().search(domain)
         result = []
         for material in materials:
             result.append({
@@ -22,6 +26,7 @@ class KedatechMaterialController(http.Controller):
                 'supplier_id_kedatech': material.supplier_id_kedatech.name if material.supplier_id_kedatech else None,
             })
         return result
+
 
     @http.route('/api/materials/<int:material_id>', type='json', auth='user', methods=['GET'], csrf=False)
     def get_material_by_id(self, material_id, **kwargs):
