@@ -8,7 +8,7 @@
     'data': [
         'views/kedatech_material_views.xml',
     ],
-    'images': ['static/description/KeDATech_Material.png'],
+    # 'images': ['static/description/icon.png'],
     'installable': True,
     'application': True,
 }

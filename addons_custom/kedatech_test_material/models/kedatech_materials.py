@@ -15,7 +15,7 @@ class KedatechMaterial(models.Model):
         ('fabric_type', 'Fabric'),
         ('jeans_type', 'Jeans'),
         ('cotton_type', 'Cotton')
-    ], string="Material Type")
+    ], string="Material Type", required=True)
     material_price_kedatech = fields.Float(string="Material Buy Price", required=True)
     currency_id_kedatech = fields.Many2one(
         'res.currency',
@@ -23,7 +23,7 @@ class KedatechMaterial(models.Model):
         default=lambda self: self.env.company.currency_id.id,
         required=True
     )
-    supplier_id_kedatech = fields.Many2one('res.partner', string="Supplier's Name", required=True)
+    supplier_id_kedatech = fields.Many2one('res.partner', string="Related Supplier", required=True)
 
     @api.constrains('material_price_kedatech')
     def _check_material_price(self):

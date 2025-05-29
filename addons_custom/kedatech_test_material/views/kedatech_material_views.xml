@@ -92,7 +92,10 @@
     </record>
 
     <!-- Menu Items -->
-    <menuitem id="menu_kedatech_root" name="Kedatech ASAF" sequence="10"/>
+    <menuitem id="menu_kedatech_root" 
+        name="Kedatech ASAF" 
+        sequence="10"
+        web_icon="kedatech_test_material, static/description/icon.png"/>
     <menuitem id="menu_kedatech_material" name="Materials" 
         parent="menu_kedatech_root" action="action_kedatech_material" sequence="10"/>
 </odoo>
